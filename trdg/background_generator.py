@@ -5,7 +5,7 @@ import random as rnd
 import numpy as np
 
 from PIL import Image, ImageDraw, ImageFilter
-
+ 
 
 def gaussian_noise(height: int, width: int) -> Image:
     """
