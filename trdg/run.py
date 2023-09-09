@@ -54,7 +54,7 @@ def parse_arguments():
         type=str,
         nargs="?",
         help="The language to use, should be fr (French), en (English), es (Spanish), de (German), ar (Arabic), cn (Chinese), ja (Japanese) or hi (Hindi)",
-        default="en",
+        default="vi",
     )
     parser.add_argument(
         "-c",
@@ -291,6 +291,7 @@ def parse_arguments():
         type=str,
         nargs="?",
         help="Define a font directory to be used",
+        default='fonts/vi'
     )
     parser.add_argument(
         "-id",
@@ -386,7 +387,7 @@ def main():
             sys.exit("Cannot open font")
     else:
         fonts = load_fonts(args.language)
-
+    print(fonts)
     # Creating synthetic sentences (or word)
     strings = []
 
